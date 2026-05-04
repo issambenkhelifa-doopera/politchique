@@ -41,13 +41,6 @@ const candidates: Candidate[] = [
     photo:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/%C3%89douard_Philippe_2017_%28cropped%29.jpg/440px-%C3%89douard_Philippe_2017_%28cropped%29.jpg",
   },
-  {
-    id: "marine-le-pen",
-    name: "Marine Le Pen",
-    party: "Rassemblement National",
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Marine_Le_Pen_2017_%28cropped%29.jpg/440px-Marine_Le_Pen_2017_%28cropped%29.jpg",
-  },
 ];
 
 const questions: Question[] = [

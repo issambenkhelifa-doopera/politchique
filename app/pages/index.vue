@@ -23,15 +23,26 @@ const candidats = [
     to: "/candidats/david-lisnard",
   },
   {
-    nom: "Marine Le Pen",
-    parti: "Rassemblement National",
-    partiIcone: "i-lucide-flag",
+    nom: "Gabriel Attal",
+    parti: "Renaissance",
+    partiIcone: "i-lucide-sun",
     photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg/500px-Marine_Le_Pen_2025_%28cropped%29.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel%20Attal%202025%20%28cropped%29.jpg",
     statut: "Fiche disponible",
     resume:
-      "Synthèse neutre des positions du RN, avec principaux axes programmatiques, sources et éléments publics vérifiables.",
-    to: "/candidats/marine-le-pen",
+      "Synthèse neutre des positions de Gabriel Attal et de Renaissance, avec sources et état des procédures.",
+    to: "/candidats/gabriel-attal",
+  },
+  {
+    nom: "Jean-Luc Mélenchon",
+    parti: "La France insoumise",
+    partiIcone: "i-lucide-megaphone",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Luc%20M%C3%A9lenchon%20%28Place%20au%20Peuple%29%20001.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Jean-Luc Mélenchon et de La France insoumise, avec sources et état des procédures.",
+    to: "/candidats/jean-luc-melenchon",
   },
 ];
 
