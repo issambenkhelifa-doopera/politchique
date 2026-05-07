@@ -1,9 +1,14 @@
-const staticRoutes = ["/", "/a-propos", "/pour-qui-voter"];
-
-type ContentPage = {
-  path?: string;
-  stem?: string;
-};
+const routes = [
+  "/",
+  "/a-propos",
+  "/about",
+  "/candidats/david-lisnard",
+  "/candidats/edouard-philippe",
+  "/candidats/gabriel-attal",
+  "/candidats/jean-luc-melenchon",
+  "/candidats/marine-le-pen",
+  "/pour-qui-voter",
+].sort((a, b) => a.localeCompare(b));
 
 function getSiteUrl(event: Parameters<typeof getRequestURL>[0]) {
   const configuredUrl = useRuntimeConfig(event).public.siteUrl;
@@ -17,12 +22,6 @@ function getSiteUrl(event: Parameters<typeof getRequestURL>[0]) {
   return `${requestUrl.protocol}//${requestUrl.host}`;
 }
 
-function normalizeRoute(path: string) {
-  const route = path === "/index" ? "/" : path.replace(/\/index$/, "");
-
-  return route.length > 1 ? route.replace(/\/$/, "") : route;
-}
-
 function escapeXml(value: string) {
   return value
     .replaceAll("&", "&amp;")
@@ -33,15 +32,6 @@ function escapeXml(value: string) {
 }
 
 export default defineEventHandler(async (event) => {
-  const contentPages = await queryCollection(event, "content").all();
-  const contentRoutes = contentPages
-    .map((page: ContentPage) => page.path ?? (page.stem ? `/${page.stem}` : ""))
-    .filter((path): path is string => path.length > 0)
-    .map(normalizeRoute);
-
-  const routes = [...new Set([...staticRoutes, ...contentRoutes])].sort((a, b) =>
-    a.localeCompare(b),
-  );
   const siteUrl = getSiteUrl(event);
   const today = new Date().toISOString().slice(0, 10);
 
