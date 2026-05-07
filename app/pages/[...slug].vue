@@ -5,8 +5,7 @@ const { data: page } = await useAsyncData("page-" + route.path, () => {
   const normalizedPath = route.path.endsWith("/")
     ? route.path.slice(0, -1) || "/"
     : route.path;
-  const withTrailingSlash =
-    normalizedPath === "/" ? "/" : `${normalizedPath}/`;
+  const withTrailingSlash = normalizedPath === "/" ? "/" : `${normalizedPath}/`;
 
   return queryCollection("content")
     .path(normalizedPath)
@@ -20,7 +19,12 @@ const { data: page } = await useAsyncData("page-" + route.path, () => {
     });
 });
 const pageMeta = computed(
-  () => (page.value ?? {}) as { party?: string; partyIcon?: string; photo?: string },
+  () =>
+    (page.value ?? {}) as {
+      party?: string;
+      partyIcon?: string;
+      photo?: string;
+    },
 );
 const seoTitle = computed(() =>
   page.value?.title
@@ -30,7 +34,7 @@ const seoTitle = computed(() =>
 const seoDescription = computed(
   () =>
     page.value?.description ||
-    "Synthèse neutre du candidat, de son programme, des sources et des procédures.",
+    "Synthèse du candidat, de son programme, des sources et des procédures.",
 );
 
 useSeoMeta({

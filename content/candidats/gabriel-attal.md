@@ -1,6 +1,6 @@
 ---
 title: Gabriel Attal (Renaissance)
-description: Synthèse neutre des positions de Gabriel Attal et de Renaissance, avec sources et état des procédures.
+description: Synthèse des positions de Gabriel Attal et de Renaissance, avec sources et état des procédures.
 party: Renaissance
 partyIcon: i-lucide-sun
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel%20Attal%202025%20%28cropped%29.jpg

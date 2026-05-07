@@ -1,6 +1,6 @@
 ---
 title: Jean-Luc Mélenchon (La France insoumise)
-description: Synthèse neutre des positions de Jean-Luc Mélenchon et de La France insoumise, avec sources et état des procédures.
+description: Synthèse des positions de Jean-Luc Mélenchon et de La France insoumise, avec sources et état des procédures.
 party: La France insoumise
 partyIcon: i-lucide-megaphone
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Luc%20M%C3%A9lenchon%20%28Place%20au%20Peuple%29%20001.jpg

@@ -1,6 +1,6 @@
 ---
 title: David Lisnard (Nouvelle Énergie)
-description: Synthèse neutre des positions de David Lisnard et de Nouvelle Énergie, avec sources et état des procédures.
+description: Synthèse des positions de David Lisnard et de Nouvelle Énergie, avec sources et état des procédures.
 party: Nouvelle Énergie
 partyIcon: i-lucide-bolt
 photo: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/500px-David_Lisnard_-_2013.jpg

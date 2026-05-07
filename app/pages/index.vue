@@ -8,7 +8,7 @@ const candidats = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Edouard_Philippe_en_2025.png/500px-Edouard_Philippe_en_2025.png",
     statut: "Fiche disponible",
     resume:
-      "Synthèse neutre du Manifeste d'Horizons, avec principaux axes programmatiques, sources et positions publiques.",
+      "Synthèse du Manifeste d'Horizons, avec principaux axes programmatiques, sources et positions publiques.",
     to: "/candidats/edouard-philippe",
   },
   {
@@ -19,7 +19,7 @@ const candidats = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/500px-David_Lisnard_-_2013.jpg",
     statut: "Fiche disponible",
     resume:
-      "Synthèse neutre des positions de David Lisnard et de Nouvelle Énergie, avec sources et état des procédures.",
+      "Synthèse des positions de David Lisnard et de Nouvelle Énergie, avec sources et état des procédures.",
     to: "/candidats/david-lisnard",
   },
   {
@@ -30,7 +30,7 @@ const candidats = [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel%20Attal%202025%20%28cropped%29.jpg",
     statut: "Fiche disponible",
     resume:
-      "Synthèse neutre des positions de Gabriel Attal et de Renaissance, avec sources et état des procédures.",
+      "Synthèse des positions de Gabriel Attal et de Renaissance, avec sources et état des procédures.",
     to: "/candidats/gabriel-attal",
   },
   {
@@ -41,7 +41,7 @@ const candidats = [
       "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Luc%20M%C3%A9lenchon%20%28Place%20au%20Peuple%29%20001.jpg",
     statut: "Fiche disponible",
     resume:
-      "Synthèse neutre des positions de Jean-Luc Mélenchon et de La France insoumise, avec sources et état des procédures.",
+      "Synthèse des positions de Jean-Luc Mélenchon et de La France insoumise, avec sources et état des procédures.",
     to: "/candidats/jean-luc-melenchon",
   },
 ];
@@ -66,7 +66,7 @@ const candidatsAleatoires = useState("candidats-aleatoires", () =>
 useSeoMeta({
   title: "Présidentielle française 2027 : candidats et programmes",
   description:
-    "Comparez les candidats à la présidentielle française et consultez des synthèses neutres de leurs programmes, sources et procédures.",
+    "Comparez les candidats à la présidentielle française et consultez des synthèses de leurs programmes, sources et procédures.",
 });
 
 function remelangerCandidats() {

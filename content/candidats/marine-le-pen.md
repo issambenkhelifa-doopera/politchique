@@ -1,6 +1,6 @@
 ---
 title: Marine Le Pen (Rassemblement National)
-description: Synthèse neutre des positions de Marine Le Pen et du RN, avec sources et état des procédures.
+description: Synthèse des positions de Marine Le Pen et du RN, avec sources et état des procédures.
 party: Rassemblement National
 partyIcon: i-lucide-flag
 photo: https://upload.wikimedia.org/wikipedia/commons/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg
