@@ -24,22 +24,188 @@ type Question = {
 };
 
 const themes: Array<{ id: Theme; label: string }> = [
-  { id: "economie", label: "Economie / fiscalite" },
+  { id: "economie", label: "Économie / fiscalité" },
   { id: "immigration", label: "Immigration / asile" },
-  { id: "ecologie", label: "Ecologie / energie" },
+  { id: "ecologie", label: "Écologie / énergie" },
   { id: "institutions", label: "Institutions" },
   { id: "europe", label: "Europe" },
-  { id: "securite", label: "Securite / justice" },
+  { id: "securite", label: "Sécurité / justice" },
   { id: "social", label: "Social / travail" },
 ];
+
+const candidateIds = [
+  "edouard-philippe",
+  "david-lisnard",
+  "gabriel-attal",
+  "jerome-guedj",
+  "jean-luc-melenchon",
+  "marine-le-pen",
+  "bruno-retailleau",
+  "xavier-bertrand",
+  "nicolas-dupont-aignan",
+  "florian-philippot",
+  "francois-asselineau",
+  "nathalie-arthaud",
+  "delphine-batho",
+] as const;
+
+const candidateSources: Record<
+  string,
+  { label: string; url: string }
+> = {
+  "edouard-philippe": {
+    label: "Horizons — Le Manifeste",
+    url: "https://horizonsleparti.fr/le-manifeste/",
+  },
+  "david-lisnard": {
+    label: "Nouvelle Énergie — Programme",
+    url: "https://www.nouvelleenergie.fr/",
+  },
+  "gabriel-attal": {
+    label: "Renaissance — Site officiel",
+    url: "https://www.parti-renaissance.fr/",
+  },
+  "jerome-guedj": {
+    label: "Parti socialiste — Projet",
+    url: "https://ressources-militantes.parti-socialiste.fr/assets/pdf/PROJET_PS_V21avril-2.pdf",
+  },
+  "jean-luc-melenchon": {
+    label: "LFI — Avenir en commun 2025",
+    url: "https://melenchon2027.fr/programme2025/livre/",
+  },
+  "marine-le-pen": {
+    label: "RN — 22 mesures",
+    url: "https://rassemblementnational.fr/22-mesures",
+  },
+  "bruno-retailleau": {
+    label: "Les Républicains — Nos propositions",
+    url: "https://republicains.fr/qrtravail/",
+  },
+  "xavier-bertrand": {
+    label: "Nous France — La vision",
+    url: "https://www.nousfrance.fr/vision/",
+  },
+  "nicolas-dupont-aignan": {
+    label: "Debout la France — Le projet",
+    url: "https://www.debout-la-france.fr/notre-projet/",
+  },
+  "florian-philippot": {
+    label: "Les Patriotes — Grandes orientations",
+    url: "https://les-patriotes.fr/wp-content/uploads/2025/09/lespatriotes_projet.pdf",
+  },
+  "francois-asselineau": {
+    label: "UPR — Programme 2022",
+    url: "https://upr.fr/actualites/programme-presidentiel-2022",
+  },
+  "nathalie-arthaud": {
+    label: "Lutte ouvrière — Portail",
+    url: "https://www.lutte-ouvriere.org/",
+  },
+  "delphine-batho": {
+    label: "Génération Écologie — Notre projet",
+    url: "https://www.generationecologie.fr/a-propos/generation-ecologie/notre-projet/",
+  },
+};
+
+function buildPositions(
+  values: Partial<Record<(typeof candidateIds)[number], number>>,
+): Record<string, number> {
+  return Object.fromEntries(
+    candidateIds.map((id) => [id, values[id] ?? 0]),
+  );
+}
 
 const candidates: Candidate[] = [
   {
     id: "edouard-philippe",
-    name: "Edouard Philippe",
+    name: "Édouard Philippe",
     party: "Horizons",
     photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/%C3%89douard_Philippe_2017_%28cropped%29.jpg/440px-%C3%89douard_Philippe_2017_%28cropped%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Edouard_Philippe_en_2025.png/500px-Edouard_Philippe_en_2025.png",
+  },
+  {
+    id: "david-lisnard",
+    name: "David Lisnard",
+    party: "Nouvelle Énergie",
+    photo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/500px-David_Lisnard_-_2013.jpg",
+  },
+  {
+    id: "gabriel-attal",
+    name: "Gabriel Attal",
+    party: "Renaissance",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel%20Attal%202025%20%28cropped%29.jpg",
+  },
+  {
+    id: "jerome-guedj",
+    name: "Jérôme Guedj",
+    party: "Parti socialiste",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%A9r%C3%B4me%20Guedj%202010%20%28cropped%29.jpg",
+  },
+  {
+    id: "jean-luc-melenchon",
+    name: "Jean-Luc Mélenchon",
+    party: "La France insoumise",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Luc%20M%C3%A9lenchon%20%28Place%20au%20Peuple%29%20001.jpg",
+  },
+  {
+    id: "marine-le-pen",
+    name: "Marine Le Pen",
+    party: "Rassemblement National",
+    photo:
+      "https://upload.wikimedia.org/wikipedia/commons/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg",
+  },
+  {
+    id: "bruno-retailleau",
+    name: "Bruno Retailleau",
+    party: "Les Républicains",
+    photo:
+      "https://upload.wikimedia.org/wikipedia/commons/5/57/Bruno_Retailleau.png",
+  },
+  {
+    id: "xavier-bertrand",
+    name: "Xavier Bertrand",
+    party: "Nous France",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Xavier%20Bertrand%20-%202025%20%28cropped%29.jpg",
+  },
+  {
+    id: "nicolas-dupont-aignan",
+    name: "Nicolas Dupont-Aignan",
+    party: "Debout la France",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais_%28cropped%29.jpg",
+  },
+  {
+    id: "florian-philippot",
+    name: "Florian Philippot",
+    party: "Les Patriotes",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Florian_Philippot_%28A%29_%28cropped%29.JPG",
+  },
+  {
+    id: "francois-asselineau",
+    name: "François Asselineau",
+    party: "Union populaire républicaine",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois%20ASSELINEAU.jpg",
+  },
+  {
+    id: "nathalie-arthaud",
+    name: "Nathalie Arthaud",
+    party: "Lutte ouvrière",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Nathalie%20Arthaud%20%28LO%29%2019-05-2024.jpg",
+  },
+  {
+    id: "delphine-batho",
+    name: "Delphine Batho",
+    party: "Génération Écologie",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Delphine%20Batho%20%28cropped%29.png",
   },
 ];
 
@@ -47,172 +213,236 @@ const questions: Question[] = [
   {
     id: "q1",
     theme: "economie",
-    text: "L'Etat doit continuer les reformes structurelles pour reduire durablement la depense publique.",
-    positions: { "edouard-philippe": 2, "marine-le-pen": 0 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "RN - 22 mesures",
-        url: "https://rassemblementnational.fr/22-mesures",
-      },
-    },
+    text: "Réduire la dette et la dépense publique doit primer sur de nouvelles dépenses sociales.",
+    positions: buildPositions({
+      "bruno-retailleau": 2,
+      "edouard-philippe": 2,
+      "gabriel-attal": 1,
+      "david-lisnard": 1,
+      "marine-le-pen": 1,
+      "xavier-bertrand": 1,
+      "nicolas-dupont-aignan": 1,
+      "jerome-guedj": -1,
+      "delphine-batho": -1,
+      "jean-luc-melenchon": -2,
+      "nathalie-arthaud": -2,
+    }),
+    sources: {},
   },
   {
     id: "q2",
     theme: "social",
-    text: "La priorite doit etre la revalorisation du travail et du merite.",
-    positions: { "edouard-philippe": 2, "marine-le-pen": 1 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "RN - Programme 2024 (PDF)",
-        url: "https://rassemblementnational.fr/documents/202406-programme.pdf",
-      },
-    },
+    text: "Les salaires les plus bas (SMIC et minima) doivent être fortement revalorisés.",
+    positions: buildPositions({
+      "nathalie-arthaud": 2,
+      "jean-luc-melenchon": 2,
+      "francois-asselineau": 2,
+      "nicolas-dupont-aignan": 2,
+      "jerome-guedj": 1,
+      "bruno-retailleau": 1,
+      "marine-le-pen": 1,
+      "xavier-bertrand": 1,
+    }),
+    sources: {},
   },
   {
     id: "q3",
-    theme: "immigration",
-    text: "Il faut durcir fortement les regles d'immigration et de regroupement familial.",
-    positions: { "edouard-philippe": 0, "marine-le-pen": 2 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "RN - 22 mesures",
-        url: "https://rassemblementnational.fr/22-mesures",
-      },
-    },
+    theme: "social",
+    text: "La réforme des retraites à 64 ans doit être abrogée ou fortement assouplie.",
+    positions: buildPositions({
+      "nathalie-arthaud": 2,
+      "jean-luc-melenchon": 2,
+      "jerome-guedj": 2,
+      "delphine-batho": 1,
+      "florian-philippot": 1,
+      "francois-asselineau": 1,
+      "gabriel-attal": -2,
+      "edouard-philippe": -1,
+      "bruno-retailleau": -2,
+      "david-lisnard": -1,
+    }),
+    sources: {},
   },
   {
     id: "q4",
-    theme: "securite",
-    text: "Les politiques de securite et de justice doivent etre significativement renforcees.",
-    positions: { "edouard-philippe": 2, "marine-le-pen": 2 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "Profession de foi 2022 (CNCCEP)",
-        url: "https://www.cnccep.fr/pdfs/Candidat-06-Marine-Le-Pen-Declaration-accessible.pdf",
-      },
-    },
+    theme: "immigration",
+    text: "L'immigration doit être nettement plus restrictive (contrôles, conditions d'accès, regroupement familial).",
+    positions: buildPositions({
+      "marine-le-pen": 2,
+      "bruno-retailleau": 2,
+      "xavier-bertrand": 2,
+      "nicolas-dupont-aignan": 2,
+      "florian-philippot": 2,
+      "francois-asselineau": 2,
+      "david-lisnard": 1,
+      "jean-luc-melenchon": -2,
+      "nathalie-arthaud": -1,
+      "jerome-guedj": -1,
+      "delphine-batho": -1,
+    }),
+    sources: {},
   },
   {
     id: "q5",
-    theme: "ecologie",
-    text: "La transition ecologique doit combiner decarbonation, innovation et pragmatisme industriel.",
-    positions: { "edouard-philippe": 2, "marine-le-pen": 0 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "RN - Programme 2024 (PDF)",
-        url: "https://rassemblementnational.fr/documents/202406-programme.pdf",
-      },
-    },
+    theme: "securite",
+    text: "Renforcer la sécurité, la justice et l'exécution des peines doit être une priorité absolue.",
+    positions: buildPositions({
+      "marine-le-pen": 2,
+      "bruno-retailleau": 2,
+      "xavier-bertrand": 2,
+      "nicolas-dupont-aignan": 2,
+      "florian-philippot": 2,
+      "david-lisnard": 2,
+      "edouard-philippe": 2,
+      "gabriel-attal": 1,
+      "francois-asselineau": 1,
+      "jean-luc-melenchon": -1,
+      "delphine-batho": -1,
+      "nathalie-arthaud": -2,
+    }),
+    sources: {},
   },
   {
     id: "q6",
-    theme: "institutions",
-    text: "La decentralisation et la clarification des competences doivent etre renforcees.",
-    positions: { "edouard-philippe": 2, "marine-le-pen": 0 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "Profession de foi 2022 (CNCCEP)",
-        url: "https://www.cnccep.fr/pdfs/Candidat-06-Marine-Le-Pen-Declaration-accessible.pdf",
-      },
-    },
+    theme: "ecologie",
+    text: "La priorité écologique doit être la sobriété et la décroissance plutôt que la croissance du PIB.",
+    positions: buildPositions({
+      "delphine-batho": 2,
+      "jean-luc-melenchon": 1,
+      "nathalie-arthaud": 1,
+      "jerome-guedj": 1,
+    }),
+    sources: {},
   },
   {
     id: "q7",
-    theme: "europe",
-    text: "La France doit approfondir son engagement europeen tout en defendant la subsidiarite.",
-    positions: { "edouard-philippe": 2, "marine-le-pen": -1 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "RN - Programme 2024 (PDF)",
-        url: "https://rassemblementnational.fr/documents/202406-programme.pdf",
-      },
-    },
+    theme: "ecologie",
+    text: "Le nucléaire doit rester au cœur de la stratégie énergétique française.",
+    positions: buildPositions({
+      "bruno-retailleau": 2,
+      "marine-le-pen": 2,
+      "nicolas-dupont-aignan": 2,
+      "florian-philippot": 2,
+      "francois-asselineau": 2,
+      "edouard-philippe": 1,
+      "gabriel-attal": 1,
+      "david-lisnard": 1,
+      "xavier-bertrand": 1,
+      "delphine-batho": -1,
+      "jean-luc-melenchon": 0,
+    }),
+    sources: {},
   },
   {
     id: "q8",
-    theme: "social",
-    text: "Les politiques sociales doivent prioritairement proteger les nationaux.",
-    positions: { "edouard-philippe": -1, "marine-le-pen": 2 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "RN - 22 mesures",
-        url: "https://rassemblementnational.fr/22-mesures",
-      },
-    },
+    theme: "europe",
+    text: "La France devrait sortir de l'Union européenne et/ou de l'euro (Frexit).",
+    positions: buildPositions({
+      "florian-philippot": 2,
+      "francois-asselineau": 2,
+      "nicolas-dupont-aignan": 2,
+      "marine-le-pen": 1,
+      "jean-luc-melenchon": 1,
+      "gabriel-attal": -2,
+      "edouard-philippe": -2,
+      "jerome-guedj": -2,
+      "bruno-retailleau": -2,
+      "xavier-bertrand": -1,
+      "david-lisnard": -1,
+      "delphine-batho": 0,
+    }),
+    sources: {},
   },
   {
     id: "q9",
-    theme: "economie",
-    text: "Les baisses de taxes ciblees (energie, consommation) doivent etre prioritaires.",
-    positions: { "edouard-philippe": -1, "marine-le-pen": 2 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "RN - 22 mesures",
-        url: "https://rassemblementnational.fr/22-mesures",
-      },
-    },
+    theme: "europe",
+    text: "L'intégration européenne doit être approfondie pour répondre aux crises (climat, sécurité, économie).",
+    positions: buildPositions({
+      "gabriel-attal": 2,
+      "edouard-philippe": 2,
+      "jerome-guedj": 2,
+      "david-lisnard": 1,
+      "delphine-batho": 1,
+      "florian-philippot": -2,
+      "francois-asselineau": -2,
+      "nicolas-dupont-aignan": -2,
+      "marine-le-pen": -2,
+      "jean-luc-melenchon": -1,
+      "bruno-retailleau": -1,
+      "nathalie-arthaud": -1,
+    }),
+    sources: {},
   },
   {
     id: "q10",
     theme: "institutions",
-    text: "L'action publique doit avant tout se concentrer sur les missions regaliennes.",
-    positions: { "edouard-philippe": 1, "marine-le-pen": 2 },
-    sources: {
-      "edouard-philippe": {
-        label: "Horizons - Le Manifeste",
-        url: "https://horizonsleparti.fr/le-manifeste/",
-      },
-      "marine-le-pen": {
-        label: "Profession de foi 2022 (CNCCEP)",
-        url: "https://www.cnccep.fr/pdfs/Candidat-06-Marine-Le-Pen-Declaration-accessible.pdf",
-      },
-    },
+    text: "Le référendum d'initiative citoyenne (RIC) doit être inscrit dans la Constitution.",
+    positions: buildPositions({
+      "jean-luc-melenchon": 2,
+      "nicolas-dupont-aignan": 2,
+      "florian-philippot": 2,
+      "francois-asselineau": 2,
+      "marine-le-pen": 1,
+      "delphine-batho": 1,
+      "jerome-guedj": 1,
+      "gabriel-attal": -1,
+    }),
+    sources: {},
+  },
+  {
+    id: "q11",
+    theme: "institutions",
+    text: "Le régime présidentiel actuel (Ve République) doit être profondément remanié ou remplacé.",
+    positions: buildPositions({
+      "jean-luc-melenchon": 2,
+      "delphine-batho": 1,
+      "jerome-guedj": 1,
+      "nathalie-arthaud": 1,
+      "nicolas-dupont-aignan": 1,
+      "florian-philippot": 1,
+      "francois-asselineau": 1,
+      "gabriel-attal": -2,
+      "bruno-retailleau": -1,
+    }),
+    sources: {},
+  },
+  {
+    id: "q12",
+    theme: "economie",
+    text: "Les très grandes fortunes et les revenus du capital doivent être davantage taxés pour financer les services publics.",
+    positions: buildPositions({
+      "nathalie-arthaud": 2,
+      "jean-luc-melenchon": 2,
+      "jerome-guedj": 2,
+      "delphine-batho": 2,
+      "francois-asselineau": 1,
+      "edouard-philippe": -1,
+      "bruno-retailleau": -1,
+      "xavier-bertrand": -1,
+      "gabriel-attal": 0,
+      "marine-le-pen": 0,
+    }),
+    sources: {},
   },
 ];
 
 const likertOptions = [
   { value: -2, label: "Pas du tout d'accord" },
-  { value: -1, label: "Plutot pas d'accord" },
+  { value: -1, label: "Plutôt pas d'accord" },
   { value: 0, label: "Neutre / je ne sais pas" },
-  { value: 1, label: "Plutot d'accord" },
-  { value: 2, label: "Tout a fait d'accord" },
+  { value: 1, label: "Plutôt d'accord" },
+  { value: 2, label: "Tout à fait d'accord" },
 ];
+
+const getSourceForCandidate = (
+  question: Question,
+  candidateId: string,
+) =>
+  question.sources[candidateId] ??
+  candidateSources[candidateId] ?? {
+    label: "Fiche candidat",
+    url: `/candidats/${candidateId}`,
+  };
 
 const selectedPriorityThemes = ref<Theme[]>([]);
 const answers = reactive<Record<string, number>>({});
@@ -269,10 +499,7 @@ const results = computed(() => {
         userValue,
         candidateValue,
         distance,
-        source: question.sources[candidate.id] ?? {
-          label: "Source publique",
-          url: "#",
-        },
+        source: getSourceForCandidate(question, candidate.id),
       };
     });
 
@@ -347,9 +574,9 @@ const restartQuiz = () => {
 };
 
 useSeoMeta({
-  title: "Pour qui voter ? Quiz de proximite politique",
+  title: "Pour qui voter ? Quiz de proximité politique",
   description:
-    "Quiz de proximite politique : comparez vos reponses aux positions publiques des candidats avec methode transparente et sources.",
+    "Quiz de proximité politique : comparez vos réponses aux positions publiques de 13 candidats, avec méthode transparente et sources.",
 });
 </script>
 
@@ -359,7 +586,7 @@ useSeoMeta({
       <template #header>
         <div class="space-y-3">
           <div class="flex items-center justify-between gap-3">
-            <UBadge color="primary" variant="soft">Boussole electorale</UBadge>
+            <UBadge color="primary" variant="soft">Boussole électorale</UBadge>
             <UButton
               to="/"
               icon="i-lucide-home"
@@ -369,11 +596,11 @@ useSeoMeta({
             </UButton>
           </div>
           <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">
-            Pour qui voter ? (quiz de proximite)
+            Pour qui voter ? (quiz de proximité)
           </h1>
           <p class="text-sm text-muted">
-            Ce quiz mesure une proximite avec des positions publiques et ne
-            donne pas de consigne de vote.
+            Ce quiz mesure une proximité avec les positions publiques de
+            {{ candidates.length }} candidats et ne donne pas de consigne de vote.
           </p>
         </div>
       </template>
@@ -382,15 +609,15 @@ useSeoMeta({
         color="info"
         variant="soft"
         icon="i-lucide-shield-alert"
-        title="Neutralite et transparence"
-        description="Resultat = proximite avec des positions publiques sourcees. Ce quiz n'est pas un sondage d'intentions de vote."
+        title="Neutralité et transparence"
+        description="Résultat = proximité avec des positions publiques sourcées. Ce quiz n'est pas un sondage d'intentions de vote."
       />
     </UCard>
 
     <UCard>
       <template #header>
         <h2 class="text-lg font-semibold">
-          Etape 1 - Choisis jusqu'a 3 themes prioritaires
+          Étape 1 — Choisis jusqu'à 3 thèmes prioritaires
         </h2>
       </template>
 
@@ -412,8 +639,8 @@ useSeoMeta({
       </div>
 
       <p class="mt-3 text-xs text-muted">
-        Themes prioritaires selectionnes : {{ selectedPriorityThemes.length }}/3
-        (pondere x1.5)
+        Thèmes prioritaires sélectionnés : {{ selectedPriorityThemes.length }}/3
+        (pondéré ×1,5)
       </p>
     </UCard>
 
@@ -422,7 +649,7 @@ useSeoMeta({
         <div class="space-y-2">
           <div class="flex items-center justify-between gap-3">
             <h2 class="text-lg font-semibold">
-              Etape 2 - Reponds aux questions
+              Étape 2 — Réponds aux questions
             </h2>
             <UBadge color="neutral" variant="outline">
               {{ currentIndex + 1 }} / {{ questions.length }}
@@ -463,7 +690,7 @@ useSeoMeta({
               :disabled="currentIndex === 0"
               @click="previousQuestion"
             >
-              Precedent
+              Précédent
             </UButton>
             <UButton
               icon="i-lucide-arrow-right"
@@ -482,7 +709,7 @@ useSeoMeta({
             :disabled="!allAnswered"
             @click="calculateResults"
           >
-            Calculer mon resultat
+            Calculer mon résultat
           </UButton>
         </div>
       </template>
@@ -491,7 +718,7 @@ useSeoMeta({
     <UCard v-if="hasCalculated">
       <template #header>
         <div class="flex items-center justify-between gap-3">
-          <h2 class="text-lg font-semibold">Resultats (proximite)</h2>
+          <h2 class="text-lg font-semibold">Résultats (proximité)</h2>
           <UButton
             icon="i-lucide-rotate-ccw"
             variant="outline"
@@ -504,7 +731,7 @@ useSeoMeta({
 
       <div class="space-y-6">
         <div>
-          <h3 class="mb-3 font-semibold">Top proximites</h3>
+          <h3 class="mb-3 font-semibold">Top proximités</h3>
           <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <UCard v-for="entry in topMatches" :key="entry.candidate.id">
               <div class="flex items-center gap-3">
@@ -519,16 +746,25 @@ useSeoMeta({
                 </div>
               </div>
               <p class="mt-3 text-sm">
-                Proximite estimee :
+                Proximité estimée :
                 <strong>{{ entry.proximity }}%</strong>
               </p>
+              <UButton
+                :to="`/candidats/${entry.candidate.id}`"
+                size="xs"
+                variant="outline"
+                class="mt-3"
+                trailing-icon="i-lucide-arrow-right"
+              >
+                Voir la fiche
+              </UButton>
             </UCard>
           </div>
         </div>
 
         <div>
           <h3 class="mb-2 font-semibold">
-            Themes ou tes reponses sont les plus marquees
+            Thèmes où tes réponses sont les plus marquées
           </h3>
           <div class="flex flex-wrap gap-2">
             <UBadge
@@ -576,21 +812,21 @@ useSeoMeta({
 
     <UCard>
       <template #header>
-        <h2 class="text-lg font-semibold">Methode et transparence</h2>
+        <h2 class="text-lg font-semibold">Méthode et transparence</h2>
       </template>
       <ul class="list-disc space-y-2 pl-5 text-sm">
         <li>
           Questions formulees de facon symetrique, sans injonction de vote.
         </li>
         <li>
-          Score base sur la distance entre ta reponse et la position candidate
-          (-2 a +2).
+          Score basé sur la distance entre ta réponse et la position candidate
+          (-2 à +2), pour {{ candidates.length }} candidats.
         </li>
-        <li>Ponderation x1.5 pour tes themes prioritaires (max 3).</li>
-        <li>Chaque position est associee a une source consultable.</li>
+        <li>Pondération ×1,5 pour tes thèmes prioritaires (max 3).</li>
+        <li>Chaque position renvoie vers une source ou la fiche candidat.</li>
         <li>
-          Le calcul est local au navigateur : aucune donnee identifiante n'est
-          demandee.
+          Le calcul est local au navigateur : aucune donnée identifiante n'est
+          demandée.
         </li>
       </ul>
       <template #footer>
