@@ -34,6 +34,17 @@ const candidats = [
     to: "/candidats/gabriel-attal",
   },
   {
+    nom: "Jérôme Guedj",
+    parti: "Parti socialiste",
+    partiIcone: "i-lucide-flower-2",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/J%C3%A9r%C3%B4me%20Guedj%202010%20%28cropped%29.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Jérôme Guedj et du Parti socialiste, avec sources et état des procédures.",
+    to: "/candidats/jerome-guedj",
+  },
+  {
     nom: "Jean-Luc Mélenchon",
     parti: "La France insoumise",
     partiIcone: "i-lucide-megaphone",

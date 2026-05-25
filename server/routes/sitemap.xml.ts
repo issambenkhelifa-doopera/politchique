@@ -10,6 +10,7 @@ const routes = [
   "/candidats/francois-asselineau",
   "/candidats/gabriel-attal",
   "/candidats/jean-luc-melenchon",
+  "/candidats/jerome-guedj",
   "/candidats/marine-le-pen",
   "/candidats/nathalie-arthaud",
   "/candidats/nicolas-dupont-aignan",

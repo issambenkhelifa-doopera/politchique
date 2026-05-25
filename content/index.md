@@ -15,6 +15,7 @@ Objectif : présenter les candidats et synthétiser leurs positions de manière 
 - [François Asselineau (Union populaire républicaine)](/candidats/francois-asselineau)
 - [Nathalie Arthaud (Lutte ouvrière)](/candidats/nathalie-arthaud)
 - [Delphine Batho (Génération Écologie)](/candidats/delphine-batho)
+- [Jérôme Guedj (Parti socialiste)](/candidats/jerome-guedj)
 
 ## À propos de cette fiche
 
