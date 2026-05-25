@@ -28,6 +28,11 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/ui-pro',
   ],
+  nitro: {                                                                            
+    prerender: {                                                                      
+      routes: ['/sitemap.xml'],                                                       
+    },                                                                                
+  },
   css: ['~/assets/css/main.css'],
   uiPro: {
     license: "18664695-FBE3-4265-B599-794BC7843E8D",
