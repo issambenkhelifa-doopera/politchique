@@ -44,6 +44,94 @@ const candidats = [
       "Synthèse des positions de Jean-Luc Mélenchon et de La France insoumise, avec sources et état des procédures.",
     to: "/candidats/jean-luc-melenchon",
   },
+  {
+    nom: "Marine Le Pen",
+    parti: "Rassemblement National",
+    partiIcone: "i-lucide-flag",
+    photo:
+      "https://upload.wikimedia.org/wikipedia/commons/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse des positions de Marine Le Pen et du RN, avec sources et état des procédures.",
+    to: "/candidats/marine-le-pen",
+  },
+  {
+    nom: "Bruno Retailleau",
+    parti: "Les Républicains",
+    partiIcone: "i-lucide-shield",
+    photo:
+      "https://upload.wikimedia.org/wikipedia/commons/5/57/Bruno_Retailleau.png",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Bruno Retailleau et des Républicains, avec sources et état des procédures.",
+    to: "/candidats/bruno-retailleau",
+  },
+  {
+    nom: "Xavier Bertrand",
+    parti: "Nous France",
+    partiIcone: "i-lucide-map",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Xavier%20Bertrand%20-%202025%20%28cropped%29.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Xavier Bertrand et de Nous France, avec sources et état des procédures.",
+    to: "/candidats/xavier-bertrand",
+  },
+  {
+    nom: "Nicolas Dupont-Aignan",
+    parti: "Debout la France",
+    partiIcone: "i-lucide-flag",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Nicolas_Dupont-Aignan%2C_homme_politique_fran%C3%A7ais_%28cropped%29.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Nicolas Dupont-Aignan et de Debout la France, avec sources et état des procédures.",
+    to: "/candidats/nicolas-dupont-aignan",
+  },
+  {
+    nom: "Florian Philippot",
+    parti: "Les Patriotes",
+    partiIcone: "i-lucide-flag",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Florian_Philippot_%28A%29_%28cropped%29.JPG",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Florian Philippot et des Patriotes, avec sources et état des procédures.",
+    to: "/candidats/florian-philippot",
+  },
+  {
+    nom: "François Asselineau",
+    parti: "Union populaire républicaine",
+    partiIcone: "i-lucide-landmark",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois%20ASSELINEAU.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de François Asselineau et de l'Union populaire républicaine, avec sources et état des procédures.",
+    to: "/candidats/francois-asselineau",
+  },
+  {
+    nom: "Nathalie Arthaud",
+    parti: "Lutte ouvrière",
+    partiIcone: "i-lucide-hammer",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Nathalie%20Arthaud%20%28LO%29%2019-05-2024.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Nathalie Arthaud et de Lutte ouvrière, avec sources et état des procédures.",
+    to: "/candidats/nathalie-arthaud",
+  },
+  {
+    nom: "Delphine Batho",
+    parti: "Génération Écologie",
+    partiIcone: "i-lucide-leaf",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Delphine%20Batho%20%28cropped%29.png",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Delphine Batho et de Génération Écologie, avec sources et état des procédures.",
+    to: "/candidats/delphine-batho",
+  },
 ];
 
 function melangerCandidats<T>(liste: T[]): T[] {

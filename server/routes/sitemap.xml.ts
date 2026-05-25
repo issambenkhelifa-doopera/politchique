@@ -2,11 +2,18 @@ const routes = [
   "/",
   "/a-propos",
   "/about",
+  "/candidats/bruno-retailleau",
   "/candidats/david-lisnard",
+  "/candidats/delphine-batho",
   "/candidats/edouard-philippe",
+  "/candidats/florian-philippot",
+  "/candidats/francois-asselineau",
   "/candidats/gabriel-attal",
   "/candidats/jean-luc-melenchon",
   "/candidats/marine-le-pen",
+  "/candidats/nathalie-arthaud",
+  "/candidats/nicolas-dupont-aignan",
+  "/candidats/xavier-bertrand",
   "/pour-qui-voter",
 ].sort((a, b) => a.localeCompare(b));
 

@@ -7,6 +7,14 @@ Objectif : présenter les candidats et synthétiser leurs positions de manière 
 ## Candidats
 
 - [Édouard Philippe (Horizons)](/candidats/edouard-philippe)
+- [Marine Le Pen (Rassemblement National)](/candidats/marine-le-pen)
+- [Bruno Retailleau (Les Républicains)](/candidats/bruno-retailleau)
+- [Xavier Bertrand (Nous France)](/candidats/xavier-bertrand)
+- [Nicolas Dupont-Aignan (Debout la France)](/candidats/nicolas-dupont-aignan)
+- [Florian Philippot (Les Patriotes)](/candidats/florian-philippot)
+- [François Asselineau (Union populaire républicaine)](/candidats/francois-asselineau)
+- [Nathalie Arthaud (Lutte ouvrière)](/candidats/nathalie-arthaud)
+- [Delphine Batho (Génération Écologie)](/candidats/delphine-batho)
 
 ## À propos de cette fiche
 
