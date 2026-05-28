@@ -6,8 +6,6 @@ partyIcon: i-lucide-compass
 photo: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Edouard_Philippe_en_2025.png/500px-Edouard_Philippe_en_2025.png
 ---
 
-# Édouard Philippe (Horizons)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Edouard_Philippe_en_2025.png/500px-Edouard_Philippe_en_2025.png"

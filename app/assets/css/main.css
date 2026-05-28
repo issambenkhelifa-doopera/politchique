@@ -1,2 +1,358 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+/* ============================================================
+   République Française — bleu / blanc / rouge
+   Inspired by the official charte graphique de l'État.
+   ============================================================ */
+
+:root {
+  --fr-bleu: #000091;
+  --fr-bleu-clair: #1212ff;
+  --fr-rouge: #e1000f;
+  --fr-rouge-clair: #ff3a3a;
+  --fr-ink: #0b1220;
+  --fr-ink-soft: #1a1f2c;
+  --fr-paper: #fef9f4;
+  --fr-paper-soft: #fff7ed;
+  --fr-cream: #faf6f0;
+  --fr-line: #e5e7eb;
+}
+
+/* === Typography: serif for headings (Marianne / République feel) === */
+html {
+  font-family:
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-weight: 500;
+  color: var(--fr-ink);
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(0, 0, 145, 0.05) 0,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(225, 0, 15, 0.05) 0,
+      transparent 40%
+    ),
+    var(--fr-cream);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:
+    "DM Serif Display",
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--fr-ink);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4.4vw, 3.5rem);
+  line-height: 1.02;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+  line-height: 1.08;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  line-height: 1.15;
+}
+
+strong,
+b {
+  font-weight: 800;
+  color: var(--fr-ink);
+}
+
+/* === Drapeau tricolore au sommet === */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  z-index: 60;
+  background: linear-gradient(
+    to right,
+    var(--fr-bleu) 0 33.33%,
+    #ffffff 33.33% 66.66%,
+    var(--fr-rouge) 66.66% 100%
+  );
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+}
+
+main {
+  padding-top: 6px;
+}
+
+/* === Marianne accent: filigrane discret bleu/rouge sous le header === */
+.u-container,
+[class*="UContainer"] {
+  position: relative;
+}
+
+/* === Cartes officielles === */
+[class*="ring-default"] {
+  --tw-ring-color: rgba(11, 18, 32, 0.16) !important;
+  background: #ffffff !important;
+  box-shadow:
+    0 1px 0 rgba(11, 18, 32, 0.04),
+    0 8px 24px -16px rgba(11, 18, 32, 0.25) !important;
+  border-radius: 6px !important;
+}
+
+[class*="ring-default"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Bandeau bleu/rouge sur le côté gauche des cartes principales */
+section > [class*="ring-default"],
+main > div > [class*="ring-default"]:first-child {
+  border-left: 4px solid var(--fr-bleu) !important;
+}
+
+/* === Boutons : couleurs officielles === */
+button,
+.u-button,
+a[role="button"] {
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+  border-radius: 4px !important;
+}
+
+a[href][class*="bg-blue-900"],
+button[class*="bg-blue-900"],
+.bg-blue-900 {
+  background-color: var(--fr-bleu) !important;
+}
+
+a[href][class*="bg-blue-900"]:hover,
+button[class*="bg-blue-900"]:hover,
+.bg-blue-900:hover,
+.hover\:bg-blue-800:hover {
+  background-color: var(--fr-bleu-clair) !important;
+}
+
+.bg-red-500 {
+  background-color: var(--fr-rouge) !important;
+}
+
+.bg-red-500:hover,
+.hover\:bg-red-600:hover {
+  background-color: var(--fr-rouge-clair) !important;
+}
+
+/* === Badges : étiquettes officielles === */
+.u-badge,
+span[class*="UBadge"],
+[class*="UBadge"] {
+  font-weight: 800 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px !important;
+}
+
+/* === Liens dans le corps === */
+a {
+  text-underline-offset: 3px;
+}
+
+/* === Avatar : encadrement officiel === */
+[class*="UAvatar"],
+img[alt*="andidat"],
+img[alt*="hoto"] {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px var(--fr-bleu);
+}
+
+/* === Prose (fiches candidats, ContentRenderer) === */
+.prose {
+  --tw-prose-headings: var(--fr-ink);
+  --tw-prose-body: var(--fr-ink);
+  font-weight: 500;
+  font-size: 1.02rem;
+}
+
+.prose h1 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.prose h1::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 100%;
+  margin-top: 0.5rem;
+  background: linear-gradient(
+    to right,
+    var(--fr-bleu) 0 33.33%,
+    #ffffff 33.33% 66.66%,
+    var(--fr-rouge) 66.66% 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.prose h2 {
+  border-bottom: 3px solid var(--fr-ink);
+  padding-bottom: 0.35rem;
+  margin-top: 2.25rem;
+}
+
+.prose h3 {
+  border-left: 5px solid var(--fr-rouge);
+  padding-left: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.prose strong {
+  color: var(--fr-bleu);
+  font-weight: 800;
+}
+
+.prose blockquote {
+  border-left: 5px solid var(--fr-bleu);
+  background: var(--fr-paper);
+  font-weight: 600;
+  color: var(--fr-ink);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+  font-style: normal;
+}
+
+.prose a {
+  color: var(--fr-bleu);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--fr-rouge);
+}
+
+.prose a:hover {
+  color: var(--fr-bleu-clair);
+}
+
+.prose details {
+  border: 2px solid var(--fr-ink);
+  border-left: 6px solid var(--fr-bleu);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  margin: 0.9rem 0;
+  background: #ffffff;
+}
+
+.prose details:nth-of-type(even) {
+  border-left-color: var(--fr-rouge);
+}
+
+.prose details > summary {
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  font-family:
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  color: var(--fr-ink);
+}
+
+.prose details[open] > summary {
+  margin-bottom: 0.6rem;
+  border-bottom: 2px dashed var(--fr-line);
+  padding-bottom: 0.45rem;
+}
+
+.prose ul > li::marker,
+.prose ol > li::marker {
+  color: var(--fr-rouge);
+  font-weight: 900;
+}
+
+.prose hr {
+  border: none;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--fr-bleu) 0 33.33%,
+    #ffffff 33.33% 66.66%,
+    var(--fr-rouge) 66.66% 100%
+  );
+  border-radius: 2px;
+  margin: 2rem 0;
+}
+
+/* === Pied de page : Liberté · Égalité · Fraternité === */
+footer {
+  background:
+    linear-gradient(180deg, var(--fr-bleu) 0%, #00006e 100%) !important;
+  color: #ffffff !important;
+  border-top: 6px solid var(--fr-rouge) !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+footer a {
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--fr-rouge);
+}
+
+footer a:hover {
+  color: #fde2e2;
+}
+
+/* Petite cocarde tricolore en pseudo-élément */
+.fr-cocarde {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      var(--fr-rouge) 0 35%,
+      #ffffff 35% 65%,
+      var(--fr-bleu) 65% 100%
+    );
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}

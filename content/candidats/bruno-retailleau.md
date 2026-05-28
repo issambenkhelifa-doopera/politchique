@@ -5,9 +5,6 @@ party: Les Républicains
 partyIcon: i-lucide-shield
 photo: https://upload.wikimedia.org/wikipedia/commons/5/57/Bruno_Retailleau.png
 ---
-
-# Bruno Retailleau (Les Républicains)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/5/57/Bruno_Retailleau.png"

@@ -174,21 +174,31 @@ function remelangerCandidats() {
 </script>
 
 <template>
-  <UContainer class="py-12 space-y-8">
-    <UCard>
+  <UContainer class="py-12 space-y-10">
+    <UCard
+      :ui="{
+        root: 'border-2 border-gray-900 shadow-[6px_6px_0_0_rgba(11,18,32,1)]',
+      }"
+    >
       <template #header>
-        <div class="space-y-3">
+        <div class="space-y-4">
           <UBadge
             color="primary"
-            variant="soft"
-            class="bg-red-500 text-white hover:bg-red-600"
+            variant="solid"
+            class="bg-red-600 text-white hover:bg-red-700 px-3 py-1 text-xs"
           >
-            Présidentielle française
+            Présidentielle française · 2027
           </UBadge>
-          <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">
-            Candidats et programmes
-          </h1>
-          <p class="text-sm text-muted">
+          <div class="flex items-center gap-3">
+            <FrLogo size="lg" />
+            <h1
+              class="text-4xl font-black tracking-tighter sm:text-5xl uppercase leading-[0.95]"
+            >
+              Candidats <span class="text-red-600">&</span> programmes
+            </h1>
+          </div>
+
+          <p class="text-base font-medium text-gray-700 max-w-2xl">
             Cette application présente les candidats à la future élection
             présidentielle et synthétise leurs positions de manière claire, en
             français.

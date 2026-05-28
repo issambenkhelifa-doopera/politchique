@@ -6,8 +6,6 @@ partyIcon: i-lucide-leaf
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Delphine%20Batho%20%28cropped%29.png
 ---
 
-# Delphine Batho (Génération Écologie)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/Delphine%20Batho%20%28cropped%29.png"

@@ -6,8 +6,6 @@ partyIcon: i-lucide-flag
 photo: https://upload.wikimedia.org/wikipedia/commons/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg
 ---
 
-# Marine Le Pen (Rassemblement National)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/8/81/Marine_Le_Pen_2025_%28cropped%29.jpg"

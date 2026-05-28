@@ -6,8 +6,6 @@ partyIcon: i-lucide-hammer
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Nathalie%20Arthaud%20%28LO%29%2019-05-2024.jpg
 ---
 
-# Nathalie Arthaud (Lutte ouvrière)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/Nathalie%20Arthaud%20%28LO%29%2019-05-2024.jpg"

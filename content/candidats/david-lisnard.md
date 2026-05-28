@@ -6,8 +6,6 @@ partyIcon: i-lucide-bolt
 photo: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/500px-David_Lisnard_-_2013.jpg
 ---
 
-# David Lisnard (Nouvelle Énergie)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/David_Lisnard_-_2013.jpg/500px-David_Lisnard_-_2013.jpg"

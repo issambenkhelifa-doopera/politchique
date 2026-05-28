@@ -6,8 +6,6 @@ partyIcon: i-lucide-landmark
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois%20ASSELINEAU.jpg
 ---
 
-# François Asselineau (Union populaire républicaine)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois%20ASSELINEAU.jpg"

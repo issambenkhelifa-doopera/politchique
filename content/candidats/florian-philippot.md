@@ -5,9 +5,6 @@ party: Les Patriotes
 partyIcon: i-lucide-flag
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Florian_Philippot_%28A%29_%28cropped%29.JPG
 ---
-
-# Florian Philippot (Les Patriotes)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/Florian_Philippot_%28A%29_%28cropped%29.JPG"
