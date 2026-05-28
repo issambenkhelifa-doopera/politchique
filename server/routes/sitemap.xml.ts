@@ -3,6 +3,7 @@ const routes = [
   "/a-propos",
   "/about",
   "/candidats/bruno-retailleau",
+  "/candidats/clementine-autain",
   "/candidats/david-lisnard",
   "/candidats/delphine-batho",
   "/candidats/edouard-philippe",

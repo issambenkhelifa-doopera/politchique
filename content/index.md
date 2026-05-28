@@ -16,6 +16,7 @@ Objectif : présenter les candidats et synthétiser leurs positions de manière 
 - [Nathalie Arthaud (Lutte ouvrière)](/candidats/nathalie-arthaud)
 - [Delphine Batho (Génération Écologie)](/candidats/delphine-batho)
 - [Jérôme Guedj (Parti socialiste)](/candidats/jerome-guedj)
+- [Clémentine Autain (L'APRÈS)](/candidats/clementine-autain)
 
 ## À propos de cette fiche
 

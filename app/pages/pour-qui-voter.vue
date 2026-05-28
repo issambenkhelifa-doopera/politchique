@@ -47,6 +47,7 @@ const candidateIds = [
   "francois-asselineau",
   "nathalie-arthaud",
   "delphine-batho",
+  "clementine-autain",
 ] as const;
 
 const candidateSources: Record<
@@ -104,6 +105,10 @@ const candidateSources: Record<
   "delphine-batho": {
     label: "Génération Écologie — Notre projet",
     url: "https://www.generationecologie.fr/a-propos/generation-ecologie/notre-projet/",
+  },
+  "clementine-autain": {
+    label: "Clémentine Autain — Mon manifeste",
+    url: "https://clementine-autain.fr/mon-manifeste/",
   },
 };
 
@@ -206,6 +211,13 @@ const candidates: Candidate[] = [
     party: "Génération Écologie",
     photo:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Delphine%20Batho%20%28cropped%29.png",
+  },
+  {
+    id: "clementine-autain",
+    name: "Clémentine Autain",
+    party: "L'APRÈS",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cl%C3%A9mentine%20Autain%2C%202017%20%28cropped%29.jpg",
   },
 ];
 

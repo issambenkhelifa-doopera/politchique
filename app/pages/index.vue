@@ -143,6 +143,17 @@ const candidats = [
       "Synthèse neutre des positions de Delphine Batho et de Génération Écologie, avec sources et état des procédures.",
     to: "/candidats/delphine-batho",
   },
+  {
+    nom: "Clémentine Autain",
+    parti: "L'APRÈS",
+    partiIcone: "i-lucide-leaf",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cl%C3%A9mentine%20Autain%2C%202017%20%28cropped%29.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Clémentine Autain et de L'APRÈS, avec sources et état des procédures.",
+    to: "/candidats/clementine-autain",
+  },
 ];
 
 function melangerCandidats<T>(liste: T[]): T[] {
