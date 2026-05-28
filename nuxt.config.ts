@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: "",
+      siteUrl: "https://www.candidatspresidentielles2027.fr",
     },
   },
   modules: [
