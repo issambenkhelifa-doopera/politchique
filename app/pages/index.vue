@@ -154,6 +154,61 @@ const candidats = [
       "Synthèse neutre des positions de Clémentine Autain et de L'APRÈS, avec sources et état des procédures.",
     to: "/candidats/clementine-autain",
   },
+  {
+    nom: "Fabien Roussel",
+    parti: "Parti communiste français",
+    partiIcone: "i-lucide-hammer",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Roussel%20Fabien%201.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Fabien Roussel et du Parti communiste français, avec sources et état des procédures.",
+    to: "/candidats/fabien-roussel",
+  },
+  {
+    nom: "Yannick Jadot",
+    parti: "Les Écologistes",
+    partiIcone: "i-lucide-leaf",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/20210819_jadot.yannick_5725.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Yannick Jadot et des Écologistes, avec sources et état des procédures.",
+    to: "/candidats/yannick-jadot",
+  },
+  {
+    nom: "Sandrine Rousseau",
+    parti: "Les Écologistes",
+    partiIcone: "i-lucide-leaf",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Sandrine%20Rousseau%2020210819%20%28cropped%29.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Sandrine Rousseau et des Écologistes, avec sources et état des procédures.",
+    to: "/candidats/sandrine-rousseau",
+  },
+  {
+    nom: "Dominique de Villepin",
+    parti: "La France humaniste",
+    partiIcone: "i-lucide-landmark",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Dominique%20de%20Villepin%20en%202026.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Dominique de Villepin et de La France humaniste, avec sources et état des procédures.",
+    to: "/candidats/dominique-de-villepin",
+  },
+  {
+    nom: "Éric Zemmour",
+    parti: "Reconquête",
+    partiIcone: "i-lucide-flag",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89ric%20Zemmour.jpg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions d'Éric Zemmour et de Reconquête, avec sources et état des procédures.",
+    to: "/candidats/eric-zemmour",
+  },
 ];
 
 function melangerCandidats<T>(liste: T[]): T[] {
@@ -172,6 +227,27 @@ function melangerCandidats<T>(liste: T[]): T[] {
 const candidatsAleatoires = useState("candidats-aleatoires", () =>
   melangerCandidats(candidats),
 );
+
+const recherche = ref("");
+
+function normaliserTexte(texte: string) {
+  return texte
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase();
+}
+
+const candidatsFiltres = computed(() => {
+  const terme = normaliserTexte(recherche.value.trim());
+
+  if (!terme) {
+    return candidatsAleatoires.value;
+  }
+
+  return candidatsAleatoires.value.filter((candidat) =>
+    normaliserTexte(candidat.nom).includes(terme),
+  );
+});
 
 useSeoMeta({
   title: "Présidentielle française 2027 : candidats et programmes",
@@ -239,7 +315,9 @@ function remelangerCandidats() {
     </UCard>
 
     <section class="space-y-4">
-      <div class="flex items-center justify-between gap-3">
+      <div
+        class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+      >
         <div class="flex items-center gap-3">
           <h2 class="text-xl font-semibold">Liste des candidats</h2>
           <UButton
@@ -253,15 +331,41 @@ function remelangerCandidats() {
           </UButton>
         </div>
         <UBadge color="neutral" variant="outline">
-          {{ candidatsAleatoires.length }} candidat{{
-            candidatsAleatoires.length > 1 ? "s" : ""
+          {{ candidatsFiltres.length }} / {{ candidats.length }} candidat{{
+            candidats.length > 1 ? "s" : ""
           }}
         </UBadge>
       </div>
 
+      <UInput
+        v-model="recherche"
+        icon="i-lucide-search"
+        placeholder="Rechercher par nom de candidat…"
+        size="lg"
+        :ui="{ root: 'w-full' }"
+      >
+        <template v-if="recherche" #trailing>
+          <UButton
+            color="neutral"
+            variant="link"
+            icon="i-lucide-x"
+            size="xs"
+            aria-label="Effacer la recherche"
+            @click="recherche = ''"
+          />
+        </template>
+      </UInput>
+
+      <p
+        v-if="recherche.trim() && candidatsFiltres.length === 0"
+        class="rounded-lg border border-dashed border-gray-300 px-4 py-8 text-center text-sm text-muted"
+      >
+        Aucun candidat ne correspond à « {{ recherche.trim() }} ».
+      </p>
+
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <UCard
-          v-for="candidat in candidatsAleatoires"
+          v-for="candidat in candidatsFiltres"
           :key="candidat.to"
           :ui="{ body: 'space-y-4' }"
         >

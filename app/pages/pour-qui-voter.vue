@@ -48,6 +48,11 @@ const candidateIds = [
   "nathalie-arthaud",
   "delphine-batho",
   "clementine-autain",
+  "fabien-roussel",
+  "yannick-jadot",
+  "sandrine-rousseau",
+  "dominique-de-villepin",
+  "eric-zemmour",
 ] as const;
 
 const candidateSources: Record<
@@ -109,6 +114,26 @@ const candidateSources: Record<
   "clementine-autain": {
     label: "Clémentine Autain — Mon manifeste",
     url: "https://clementine-autain.fr/mon-manifeste/",
+  },
+  "fabien-roussel": {
+    label: "Fabien Roussel — La France des Jours heureux",
+    url: "https://www.fabienroussel2022.fr/le_programme",
+  },
+  "yannick-jadot": {
+    label: "Yannick Jadot — Programme présidentiel 2022",
+    url: "https://assets.nationbuilder.com/themes/6181b6eb4445ea720389b314/attachments/original/1643803625/programme_presidentiel_yannick_jadot.pdf?1643803625=",
+  },
+  "sandrine-rousseau": {
+    label: "Sandrine Rousseau — Vivantes",
+    url: "https://sandrinerousseau.fr/",
+  },
+  "dominique-de-villepin": {
+    label: "La France humaniste — Site officiel",
+    url: "https://lafrancehumaniste.fr/",
+  },
+  "eric-zemmour": {
+    label: "Éric Zemmour — Programme 2022",
+    url: "https://programme.ericzemmour.fr/",
   },
 };
 
@@ -219,6 +244,41 @@ const candidates: Candidate[] = [
     photo:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cl%C3%A9mentine%20Autain%2C%202017%20%28cropped%29.jpg",
   },
+  {
+    id: "fabien-roussel",
+    name: "Fabien Roussel",
+    party: "Parti communiste français",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Roussel%20Fabien%201.jpg",
+  },
+  {
+    id: "yannick-jadot",
+    name: "Yannick Jadot",
+    party: "Les Écologistes",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/20210819_jadot.yannick_5725.jpg",
+  },
+  {
+    id: "sandrine-rousseau",
+    name: "Sandrine Rousseau",
+    party: "Les Écologistes",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Sandrine%20Rousseau%2020210819%20%28cropped%29.jpg",
+  },
+  {
+    id: "dominique-de-villepin",
+    name: "Dominique de Villepin",
+    party: "La France humaniste",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Dominique%20de%20Villepin%20en%202026.jpg",
+  },
+  {
+    id: "eric-zemmour",
+    name: "Éric Zemmour",
+    party: "Reconquête",
+    photo:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89ric%20Zemmour.jpg",
+  },
 ];
 
 const questions: Question[] = [
@@ -238,6 +298,11 @@ const questions: Question[] = [
       "delphine-batho": -1,
       "jean-luc-melenchon": -2,
       "nathalie-arthaud": -2,
+      "fabien-roussel": -2,
+      "yannick-jadot": -2,
+      "sandrine-rousseau": -2,
+      "dominique-de-villepin": 1,
+      "eric-zemmour": 1,
     }),
     sources: {},
   },
@@ -250,6 +315,11 @@ const questions: Question[] = [
       "jean-luc-melenchon": 2,
       "francois-asselineau": 2,
       "nicolas-dupont-aignan": 2,
+      "fabien-roussel": 2,
+      "yannick-jadot": 2,
+      "sandrine-rousseau": 2,
+      "dominique-de-villepin": 1,
+      "eric-zemmour": 1,
       "jerome-guedj": 1,
       "bruno-retailleau": 1,
       "marine-le-pen": 1,
@@ -265,6 +335,11 @@ const questions: Question[] = [
       "nathalie-arthaud": 2,
       "jean-luc-melenchon": 2,
       "jerome-guedj": 2,
+      "fabien-roussel": 2,
+      "yannick-jadot": 2,
+      "sandrine-rousseau": 2,
+      "dominique-de-villepin": 0,
+      "eric-zemmour": -2,
       "delphine-batho": 1,
       "florian-philippot": 1,
       "francois-asselineau": 1,
@@ -288,6 +363,11 @@ const questions: Question[] = [
       "francois-asselineau": 2,
       "david-lisnard": 1,
       "jean-luc-melenchon": -2,
+      "fabien-roussel": -2,
+      "yannick-jadot": -2,
+      "sandrine-rousseau": -2,
+      "dominique-de-villepin": 1,
+      "eric-zemmour": 2,
       "nathalie-arthaud": -1,
       "jerome-guedj": -1,
       "delphine-batho": -1,
@@ -311,6 +391,11 @@ const questions: Question[] = [
       "jean-luc-melenchon": -1,
       "delphine-batho": -1,
       "nathalie-arthaud": -2,
+      "fabien-roussel": -1,
+      "yannick-jadot": -1,
+      "sandrine-rousseau": -1,
+      "dominique-de-villepin": 2,
+      "eric-zemmour": 2,
     }),
     sources: {},
   },
@@ -323,6 +408,11 @@ const questions: Question[] = [
       "jean-luc-melenchon": 1,
       "nathalie-arthaud": 1,
       "jerome-guedj": 1,
+      "fabien-roussel": -1,
+      "yannick-jadot": 2,
+      "sandrine-rousseau": 2,
+      "dominique-de-villepin": -1,
+      "eric-zemmour": -2,
     }),
     sources: {},
   },
@@ -336,11 +426,16 @@ const questions: Question[] = [
       "nicolas-dupont-aignan": 2,
       "florian-philippot": 2,
       "francois-asselineau": 2,
+      "fabien-roussel": 2,
       "edouard-philippe": 1,
       "gabriel-attal": 1,
       "david-lisnard": 1,
       "xavier-bertrand": 1,
       "delphine-batho": -1,
+      "yannick-jadot": -2,
+      "sandrine-rousseau": -2,
+      "dominique-de-villepin": 1,
+      "eric-zemmour": 2,
       "jean-luc-melenchon": 0,
     }),
     sources: {},
@@ -362,6 +457,11 @@ const questions: Question[] = [
       "xavier-bertrand": -1,
       "david-lisnard": -1,
       "delphine-batho": 0,
+      "fabien-roussel": -1,
+      "yannick-jadot": -1,
+      "sandrine-rousseau": -1,
+      "dominique-de-villepin": -2,
+      "eric-zemmour": 0,
     }),
     sources: {},
   },
@@ -382,6 +482,11 @@ const questions: Question[] = [
       "jean-luc-melenchon": -1,
       "bruno-retailleau": -1,
       "nathalie-arthaud": -1,
+      "fabien-roussel": -1,
+      "yannick-jadot": 1,
+      "sandrine-rousseau": 1,
+      "dominique-de-villepin": 1,
+      "eric-zemmour": -2,
     }),
     sources: {},
   },
@@ -394,6 +499,11 @@ const questions: Question[] = [
       "nicolas-dupont-aignan": 2,
       "florian-philippot": 2,
       "francois-asselineau": 2,
+      "fabien-roussel": 2,
+      "yannick-jadot": 2,
+      "sandrine-rousseau": 2,
+      "dominique-de-villepin": -1,
+      "eric-zemmour": -2,
       "marine-le-pen": 1,
       "delphine-batho": 1,
       "jerome-guedj": 1,
@@ -407,6 +517,11 @@ const questions: Question[] = [
     text: "Le régime présidentiel actuel (Ve République) doit être profondément remanié ou remplacé.",
     positions: buildPositions({
       "jean-luc-melenchon": 2,
+      "fabien-roussel": 2,
+      "yannick-jadot": 2,
+      "sandrine-rousseau": 2,
+      "dominique-de-villepin": 1,
+      "eric-zemmour": -1,
       "delphine-batho": 1,
       "jerome-guedj": 1,
       "nathalie-arthaud": 1,
@@ -427,6 +542,11 @@ const questions: Question[] = [
       "jean-luc-melenchon": 2,
       "jerome-guedj": 2,
       "delphine-batho": 2,
+      "fabien-roussel": 2,
+      "yannick-jadot": 2,
+      "sandrine-rousseau": 2,
+      "dominique-de-villepin": 0,
+      "eric-zemmour": -2,
       "francois-asselineau": 1,
       "edouard-philippe": -1,
       "bruno-retailleau": -1,
@@ -588,7 +708,7 @@ const restartQuiz = () => {
 useSeoMeta({
   title: "Pour qui voter ? Quiz de proximité politique",
   description:
-    "Quiz de proximité politique : comparez vos réponses aux positions publiques de 13 candidats, avec méthode transparente et sources.",
+    "Quiz de proximité politique : comparez vos réponses aux positions publiques de 19 candidats, avec méthode transparente et sources.",
 });
 </script>
 

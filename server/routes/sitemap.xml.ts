@@ -6,7 +6,10 @@ const routes = [
   "/candidats/clementine-autain",
   "/candidats/david-lisnard",
   "/candidats/delphine-batho",
+  "/candidats/dominique-de-villepin",
   "/candidats/edouard-philippe",
+  "/candidats/eric-zemmour",
+  "/candidats/fabien-roussel",
   "/candidats/florian-philippot",
   "/candidats/francois-asselineau",
   "/candidats/gabriel-attal",
@@ -14,8 +17,10 @@ const routes = [
   "/candidats/jerome-guedj",
   "/candidats/marine-le-pen",
   "/candidats/nathalie-arthaud",
+  "/candidats/sandrine-rousseau",
   "/candidats/nicolas-dupont-aignan",
   "/candidats/xavier-bertrand",
+  "/candidats/yannick-jadot",
   "/pour-qui-voter",
 ].sort((a, b) => a.localeCompare(b));
 

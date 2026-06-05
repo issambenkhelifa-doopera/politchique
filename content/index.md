@@ -17,6 +17,11 @@ Objectif : présenter les candidats et synthétiser leurs positions de manière 
 - [Delphine Batho (Génération Écologie)](/candidats/delphine-batho)
 - [Jérôme Guedj (Parti socialiste)](/candidats/jerome-guedj)
 - [Clémentine Autain (L'APRÈS)](/candidats/clementine-autain)
+- [Fabien Roussel (Parti communiste français)](/candidats/fabien-roussel)
+- [Yannick Jadot (Les Écologistes)](/candidats/yannick-jadot)
+- [Sandrine Rousseau (Les Écologistes)](/candidats/sandrine-rousseau)
+- [Dominique de Villepin (La France humaniste)](/candidats/dominique-de-villepin)
+- [Éric Zemmour (Reconquête)](/candidats/eric-zemmour)
 
 ## À propos de cette fiche
 
