@@ -22,6 +22,7 @@ Objectif : présenter les candidats et synthétiser leurs positions de manière 
 - [Sandrine Rousseau (Les Écologistes)](/candidats/sandrine-rousseau)
 - [Dominique de Villepin (La France humaniste)](/candidats/dominique-de-villepin)
 - [Éric Zemmour (Reconquête)](/candidats/eric-zemmour)
+- [Karim Bouamrane (La France Humaine et Forte)](/candidats/karim-bouamrane)
 
 ## À propos de cette fiche
 

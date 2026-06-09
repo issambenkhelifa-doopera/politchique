@@ -53,6 +53,7 @@ const candidateIds = [
   "sandrine-rousseau",
   "dominique-de-villepin",
   "eric-zemmour",
+  "karim-bouamrane",
 ] as const;
 
 const candidateSources: Record<
@@ -134,6 +135,10 @@ const candidateSources: Record<
   "eric-zemmour": {
     label: "Éric Zemmour — Programme 2022",
     url: "https://programme.ericzemmour.fr/",
+  },
+  "karim-bouamrane": {
+    label: "Karim Bouamrane — La France Humaine et Forte",
+    url: "https://www.lafrancehumaineetforte.fr/",
   },
 };
 
@@ -279,6 +284,12 @@ const candidates: Candidate[] = [
     photo:
       "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89ric%20Zemmour.jpg",
   },
+  {
+    id: "karim-bouamrane",
+    name: "Karim Bouamrane",
+    party: "La France Humaine et Forte",
+    photo: "https://www.lafrancehumaineetforte.fr/kb_bleu_hero.jpeg",
+  },
 ];
 
 const questions: Question[] = [
@@ -303,6 +314,7 @@ const questions: Question[] = [
       "sandrine-rousseau": -2,
       "dominique-de-villepin": 1,
       "eric-zemmour": 1,
+      "karim-bouamrane": 1,
     }),
     sources: {},
   },
@@ -320,6 +332,7 @@ const questions: Question[] = [
       "sandrine-rousseau": 2,
       "dominique-de-villepin": 1,
       "eric-zemmour": 1,
+      "karim-bouamrane": 2,
       "jerome-guedj": 1,
       "bruno-retailleau": 1,
       "marine-le-pen": 1,
@@ -340,6 +353,7 @@ const questions: Question[] = [
       "sandrine-rousseau": 2,
       "dominique-de-villepin": 0,
       "eric-zemmour": -2,
+      "karim-bouamrane": 1,
       "delphine-batho": 1,
       "florian-philippot": 1,
       "francois-asselineau": 1,
@@ -368,6 +382,7 @@ const questions: Question[] = [
       "sandrine-rousseau": -2,
       "dominique-de-villepin": 1,
       "eric-zemmour": 2,
+      "karim-bouamrane": 1,
       "nathalie-arthaud": -1,
       "jerome-guedj": -1,
       "delphine-batho": -1,
@@ -396,6 +411,7 @@ const questions: Question[] = [
       "sandrine-rousseau": -1,
       "dominique-de-villepin": 2,
       "eric-zemmour": 2,
+      "karim-bouamrane": 2,
     }),
     sources: {},
   },
@@ -413,6 +429,7 @@ const questions: Question[] = [
       "sandrine-rousseau": 2,
       "dominique-de-villepin": -1,
       "eric-zemmour": -2,
+      "karim-bouamrane": -1,
     }),
     sources: {},
   },
@@ -436,6 +453,7 @@ const questions: Question[] = [
       "sandrine-rousseau": -2,
       "dominique-de-villepin": 1,
       "eric-zemmour": 2,
+      "karim-bouamrane": 0,
       "jean-luc-melenchon": 0,
     }),
     sources: {},
@@ -462,6 +480,7 @@ const questions: Question[] = [
       "sandrine-rousseau": -1,
       "dominique-de-villepin": -2,
       "eric-zemmour": 0,
+      "karim-bouamrane": -2,
     }),
     sources: {},
   },
@@ -487,6 +506,7 @@ const questions: Question[] = [
       "sandrine-rousseau": 1,
       "dominique-de-villepin": 1,
       "eric-zemmour": -2,
+      "karim-bouamrane": 1,
     }),
     sources: {},
   },
@@ -504,6 +524,7 @@ const questions: Question[] = [
       "sandrine-rousseau": 2,
       "dominique-de-villepin": -1,
       "eric-zemmour": -2,
+      "karim-bouamrane": 0,
       "marine-le-pen": 1,
       "delphine-batho": 1,
       "jerome-guedj": 1,
@@ -522,6 +543,7 @@ const questions: Question[] = [
       "sandrine-rousseau": 2,
       "dominique-de-villepin": 1,
       "eric-zemmour": -1,
+      "karim-bouamrane": 0,
       "delphine-batho": 1,
       "jerome-guedj": 1,
       "nathalie-arthaud": 1,
@@ -547,6 +569,7 @@ const questions: Question[] = [
       "sandrine-rousseau": 2,
       "dominique-de-villepin": 0,
       "eric-zemmour": -2,
+      "karim-bouamrane": 1,
       "francois-asselineau": 1,
       "edouard-philippe": -1,
       "bruno-retailleau": -1,
@@ -708,7 +731,7 @@ const restartQuiz = () => {
 useSeoMeta({
   title: "Pour qui voter ? Quiz de proximité politique",
   description:
-    "Quiz de proximité politique : comparez vos réponses aux positions publiques de 19 candidats, avec méthode transparente et sources.",
+    "Quiz de proximité politique : comparez vos réponses aux positions publiques de 20 candidats, avec méthode transparente et sources.",
 });
 </script>
 

@@ -6,8 +6,6 @@ partyIcon: i-lucide-leaf
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/20210819_jadot.yannick_5725.jpg
 ---
 
-# Yannick Jadot (Les Écologistes)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/20210819_jadot.yannick_5725.jpg"

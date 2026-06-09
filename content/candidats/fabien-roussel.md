@@ -6,8 +6,6 @@ partyIcon: i-lucide-hammer
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Roussel%20Fabien%201.jpg
 ---
 
-# Fabien Roussel (Parti communiste français)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/Roussel%20Fabien%201.jpg"

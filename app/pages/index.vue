@@ -209,6 +209,16 @@ const candidats = [
       "Synthèse neutre des positions d'Éric Zemmour et de Reconquête, avec sources et état des procédures.",
     to: "/candidats/eric-zemmour",
   },
+  {
+    nom: "Karim Bouamrane",
+    parti: "La France Humaine et Forte",
+    partiIcone: "i-lucide-handshake",
+    photo: "https://www.lafrancehumaineetforte.fr/kb_bleu_hero.jpeg",
+    statut: "Fiche disponible",
+    resume:
+      "Synthèse neutre des positions de Karim Bouamrane et de La France Humaine et Forte, avec sources et état des procédures.",
+    to: "/candidats/karim-bouamrane",
+  },
 ];
 
 function melangerCandidats<T>(liste: T[]): T[] {

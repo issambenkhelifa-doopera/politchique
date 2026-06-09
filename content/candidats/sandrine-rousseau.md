@@ -6,8 +6,6 @@ partyIcon: i-lucide-leaf
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Sandrine%20Rousseau%2020210819%20%28cropped%29.jpg
 ---
 
-# Sandrine Rousseau (Les Écologistes)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/Sandrine%20Rousseau%2020210819%20%28cropped%29.jpg"

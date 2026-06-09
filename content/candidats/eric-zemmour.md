@@ -6,8 +6,6 @@ partyIcon: i-lucide-flag
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89ric%20Zemmour.jpg
 ---
 
-# Éric Zemmour (Reconquête)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89ric%20Zemmour.jpg"

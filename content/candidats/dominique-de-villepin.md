@@ -6,8 +6,6 @@ partyIcon: i-lucide-landmark
 photo: https://commons.wikimedia.org/wiki/Special:FilePath/Dominique%20de%20Villepin%20en%202026.jpg
 ---
 
-# Dominique de Villepin (La France humaniste)
-
 <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
   <img
     src="https://commons.wikimedia.org/wiki/Special:FilePath/Dominique%20de%20Villepin%20en%202026.jpg"
