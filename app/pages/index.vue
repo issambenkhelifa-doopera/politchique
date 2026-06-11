@@ -310,10 +310,10 @@ function remelangerCandidats() {
         description=""
       >
         <template #description>
-          Votez pour un candidat, pour le meilleur et pour le pire, vous serez
-          déçu quoi qu'il arrive 😎<br />Cliquez sur la fiche d'un candidat pour
-          voir son programme (ou ce qui s'en approche), les procédures et
-          potentielles condamnations.
+          Votez pour un candidat, et n'oubliez pas, vous serez déçu quoi qu'il
+          arrive 😎<br />Cliquez sur la fiche d'un candidat pour voir son
+          programme (ou ce qui s'en approche), les procédures et potentielles
+          condamnations.
         </template>
       </UAlert>
 

@@ -45,34 +45,22 @@ useSeoMeta({
         <h2 class="text-lg font-semibold">Impartialite editoriale</h2>
       </template>
       <p class="text-sm">
-        Le site est construit avec un objectif d'impartialite et de coherence :
-        comparaison des positions publiques, attribution des sources et
-        explications methodologiques.
+        Le but du site est de rassembler les programmes des candidats et de les
+        comparer. Et au passage de voir les casseroles des candidats.
       </p>
     </UCard>
 
     <UCard>
       <template #header>
-        <h2 class="text-lg font-semibold">Infrastructure et outils</h2>
-      </template>
-      <ul class="list-disc space-y-2 pl-5 text-sm">
-        <li>Serveur francais : OVH.</li>
-        <li>Tracking francais : Matomo.</li>
-        <li>Framework : Nuxt.</li>
-      </ul>
-    </UCard>
-    <UCard>
-      <template #header>
         <h2 class="text-lg font-semibold">A propos de moi</h2>
       </template>
       <p class="text-sm">
-        Je m'appelle Maxime, bizarrement, la politique ne m'interesse pas
-        beaucoup, mais je voulais faire un outil comme j'en aurai eu besoin et
-        qui permet à un seul endroit de voir les programmes des candidats, le
-        programme des candidats et aussi leurs casseroles ;)<br />
-        On a demandé à ma mère lors de son embauche (femme de ménage, à la
-        retraite) d'avoir un casier judiciaire vide. Mais bizzarement on ne
-        demande pas ça a des gens qui vont gouverner 70 millions de personnes...
+        Je m'appelle Maxime, je ne m'estime pas trop politisé même j'ai
+        forcément des positions. L'origine de ce site est le suivant : J'en ai
+        marre de voir des gens au pouvoir avec un casier judiciaire long comme
+        le bras décider du sort de 70 millions de personnes (alors qu'on a exigé
+        à ma mère, ancienne femme de ménage d'avoir un casier vierge pour faire
+        son travail)
       </p>
     </UCard>
   </UContainer>

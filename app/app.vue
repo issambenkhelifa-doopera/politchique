@@ -13,14 +13,6 @@
         </p>
         <p class="opacity-80">
           <NuxtLink to="/a-propos">À propos</NuxtLink>
-          ·
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
           · La politique c'est chiant mais c'est important
         </p>
       </footer>
