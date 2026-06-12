@@ -28,7 +28,7 @@ const pageMeta = computed(
 );
 const seoTitle = computed(() =>
   page.value?.title
-    ? `${page.value.title} | Présidentielle française 2027`
+    ? `${page.value.title} | Programme | Présidentielle française 2027`
     : "Candidat | Présidentielle française 2027",
 );
 const seoDescription = computed(
