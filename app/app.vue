@@ -73,7 +73,10 @@ onMounted(() => {
         </p>
         <p class="opacity-80">
           <NuxtLink to="/a-propos">À propos</NuxtLink>
-          · La politique c'est chiant mais c'est important
+          · La politique c'est chiant mais c'est important ·
+          <NuxtLink to="https://github.com/maximerat/politchique"
+            >GitHub</NuxtLink
+          >
         </p>
       </footer>
     </div>
